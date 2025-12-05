@@ -23,17 +23,8 @@
 		<!-- Project Header -->
 		<section class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-					<div>
-						<div class="flex items-center gap-4 mb-4">
-							<span class="px-3 py-1 bg-orange-500/20 border border-orange-500/30 rounded-full text-orange-400 text-sm font-medium">
-								{project.category}
-							</span>
-							<span class="text-gray-400">{project.year}</span>
-						</div>
-						<h1 class="text-4xl md:text-5xl font-bold mb-4">{project.title}</h1>
-						<p class="text-xl text-gray-300 max-w-3xl">{project.description}</p>
-					</div>
+				<div class="text-center">
+					<h1 class="text-4xl md:text-5xl font-bold">{project.title}</h1>
 				</div>
 			</div>
 		</section>
@@ -67,59 +58,26 @@
 			</div>
 		</section>
 
-		<!-- Project Details -->
+		<!-- Project Information -->
 		<section class="py-16 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid lg:grid-cols-3 gap-12">
-					<div class="lg:col-span-2">
-						<h2 class="text-3xl font-bold text-gray-900 mb-6">Project Details</h2>
-						<div class="prose prose-lg max-w-none">
-							<p class="text-gray-600 mb-4">
-								This {project.category.toLowerCase()} project at {project.title} represents our commitment to excellence and attention to detail. 
-								Completed in {project.year}, this project showcases our expertise in delivering high-quality construction solutions 
-								tailored to our clients' specific needs.
-							</p>
-							<p class="text-gray-600 mb-4">
-								Our team worked diligently to ensure every aspect of the project met the highest standards of quality and craftsmanship. 
-								From initial planning to final execution, we maintained open communication with the client and adhered to all safety regulations 
-								and building codes.
-							</p>
-							<p class="text-gray-600">
-								The successful completion of this project demonstrates our ability to handle complex construction challenges while delivering 
-								results that exceed expectations. We take pride in every project we undertake and strive to build lasting relationships 
-								with our clients based on trust and exceptional service.
-							</p>
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<div class="bg-gray-50 rounded-lg p-8">
+					<h3 class="text-xl font-bold text-gray-900 mb-6">Project Information</h3>
+					<dl class="space-y-4">
+						<div>
+							<dt class="text-sm font-medium text-gray-500">Location</dt>
+							<dd class="text-lg text-gray-900">{project.title}</dd>
 						</div>
-					</div>
+						<div>
+							<dt class="text-sm font-medium text-gray-500">Total Photos</dt>
+							<dd class="text-lg text-gray-900">{project.images.length}</dd>
+						</div>
+					</dl>
 					
-					<div>
-						<div class="bg-gray-50 rounded-lg p-6">
-							<h3 class="text-xl font-bold text-gray-900 mb-4">Project Information</h3>
-							<dl class="space-y-3">
-								<div>
-									<dt class="text-sm font-medium text-gray-500">Location</dt>
-									<dd class="text-gray-900">{project.title}</dd>
-								</div>
-								<div>
-									<dt class="text-sm font-medium text-gray-500">Category</dt>
-									<dd class="text-gray-900">{project.category}</dd>
-								</div>
-								<div>
-									<dt class="text-sm font-medium text-gray-500">Year Completed</dt>
-									<dd class="text-gray-900">{project.year}</dd>
-								</div>
-								<div>
-									<dt class="text-sm font-medium text-gray-500">Total Photos</dt>
-									<dd class="text-gray-900">{project.images.length}</dd>
-								</div>
-							</dl>
-							
-							<div class="mt-6">
-								<a href="/contact" class="w-full block px-6 py-3 bg-orange-600 text-white text-center font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-300">
-									Get Similar Project Quote
-								</a>
-							</div>
-						</div>
+					<div class="mt-8">
+						<a href="/contact" class="inline-block px-8 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-300">
+							Get Similar Project Quote
+						</a>
 					</div>
 				</div>
 			</div>

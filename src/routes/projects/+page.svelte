@@ -21,7 +21,7 @@
 					<a href="/projects/{project.id}" class="block bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
 						<div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-orange-400 to-red-500 h-48 relative overflow-hidden">
 							<img 
-								src={project.images[0]} 
+								src={project.images?.[0] || ''} 
 								alt={project.title}
 								class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
 							/>
@@ -35,14 +35,9 @@
 							</div>
 						</div>
 						<div class="p-6">
-							<div class="flex items-center justify-between mb-4">
-								<span class="text-sm text-orange-600 font-semibold">{project.category}</span>
-								<span class="text-sm text-gray-500">{project.year}</span>
-							</div>
-							<h3 class="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-							<p class="text-gray-600 mb-4">{project.description}</p>
+							<h3 class="text-xl font-bold text-gray-900 mb-4">{project.title}</h3>
 							<div class="flex items-center text-orange-600 font-semibold">
-								View Project ({project.images.length} photos)
+								View Project ({project.images?.length || 0} photos)
 								<svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
 								</svg>
