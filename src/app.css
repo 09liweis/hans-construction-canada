@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom background grid pattern */
+@layer utilities {
+  .bg-grid-white\/\[0\.02\] {
+    background-image: radial-gradient(circle, white 1px, transparent 1px);
+  }
+  
+  .bg-\[size\:50px_50px\] {
+    background-size: 50px 50px;
+  }
+}
