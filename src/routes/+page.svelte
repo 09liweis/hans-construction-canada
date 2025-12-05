@@ -20,12 +20,12 @@
 				</p>
 				
 				<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-					<button class="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+					<a href="/contact" class="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-center">
 						Get Free Consultation
-					</button>
-					<button class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
+					</a>
+					<a href="/projects" class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-900 transition-all duration-300 text-center">
 						View Our Work
-					</button>
+					</a>
 				</div>
 				
 				<!-- Trust Indicators -->
@@ -109,7 +109,7 @@
 				<p class="text-gray-600 mb-6">
 					Custom homes, additions, and renovations built with attention to detail and quality craftsmanship.
 				</p>
-				<a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
+				<a href="/projects" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
 					Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
 					</svg>
@@ -127,7 +127,7 @@
 				<p class="text-gray-600 mb-6">
 					Office buildings, retail spaces, and industrial facilities designed for functionality and efficiency.
 				</p>
-				<a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
+				<a href="/projects" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
 					Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
 					</svg>
@@ -146,7 +146,7 @@
 				<p class="text-gray-600 mb-6">
 					Transform your existing space with our expert renovation services that blend innovation with tradition.
 				</p>
-				<a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
+				<a href="/projects" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
 					Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
 					</svg>
