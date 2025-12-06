@@ -19,6 +19,12 @@
           Home
         </a>
         <a 
+          href="/modular" 
+          class="text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 {$page.url.pathname.startsWith('/modular') ? 'text-orange-600' : ''}"
+        >
+          Modular
+        </a>
+        <a 
           href="/projects" 
           class="text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 {$page.url.pathname.startsWith('/projects') ? 'text-orange-600' : ''}"
         >
