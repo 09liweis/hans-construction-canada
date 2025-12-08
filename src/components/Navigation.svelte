@@ -23,11 +23,6 @@
       label: 'Projects',
       href: '/projects',
       isActive: (pathname) => pathname.startsWith('/projects')
-    },
-    {
-      label: 'Contact',
-      href: '/contact',
-      isActive: (pathname) => pathname.includes('contact')
     }
   ];
 
