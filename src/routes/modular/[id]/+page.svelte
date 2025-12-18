@@ -150,14 +150,16 @@
     <!-- Main image -->
     <button 
       type="button"
-      class="max-w-full max-h-full object-contain cursor-default" 
+      class="flex items-center justify-center w-full h-full p-4 cursor-default" 
       onclick={(e) => e.stopPropagation()}
+      onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') e.stopPropagation(); }}
       aria-label="View full size image"
     >
       <img 
         src={selectedImage} 
         alt=""
         class="max-w-full max-h-full object-contain"
+        style="object-fit: contain;"
       />
     </button>
   </div>
