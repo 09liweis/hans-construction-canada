@@ -14,6 +14,10 @@
     modalInitialIndex = index;
     isModalOpen = true;
   }
+
+  function closeModal() {
+    isModalOpen = false;
+  }
 </script>
 
 {#if project}
@@ -70,6 +74,7 @@
       images={project.images}
       isOpen={isModalOpen}
       initialIndex={modalInitialIndex}
+      onClose={closeModal}
     />
 
     <!-- Project Information -->

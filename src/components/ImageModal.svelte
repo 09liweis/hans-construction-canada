@@ -2,25 +2,29 @@
   export let images: string[] = [];
   export let isOpen: boolean = false;
   export let initialIndex: number = 0;
+  export let onClose: () => void = () => {};
   
   let selectedImage: string | null = null;
   let selectedImageIndex = 0;
   
   $: if (isOpen && images.length > 0) {
-    selectedImage = images[initialIndex];
-    selectedImageIndex = initialIndex;
+    if (!selectedImage) {
+      selectedImage = images[initialIndex];
+      selectedImageIndex = initialIndex;
+    }
     if (typeof document !== 'undefined') {
       document.body.style.overflow = 'hidden';
     }
   } else {
     selectedImage = null;
+    selectedImageIndex = 0;
     if (typeof document !== 'undefined') {
       document.body.style.overflow = 'auto';
     }
   }
   
   function closeModal() {
-    isOpen = false;
+    onClose();
   }
   
   function navigateImage(direction: 'prev' | 'next') {

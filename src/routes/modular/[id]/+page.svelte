@@ -13,6 +13,10 @@
     modalInitialIndex = index;
     isModalOpen = true;
   }
+
+  function closeModal() {
+    isModalOpen = false;
+  }
 </script>
 
 {#if modular}
@@ -60,6 +64,7 @@
       images={modular.images}
       isOpen={isModalOpen}
       initialIndex={modalInitialIndex}
+      onClose={closeModal}
     />
   {/if}
 
