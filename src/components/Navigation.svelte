@@ -51,7 +51,7 @@
         href="/" 
         class="flex items-center focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded"
       >
-        <span class="text-2xl font-bold text-orange-600">Hansteel Construction</span>
+        <span class="text-2xl font-bold text-primary">Hansteel Construction</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -59,7 +59,7 @@
         {#each navItems as item}
           <a 
             href={item.href}
-            class="text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded {$page.url.pathname && item.isActive?.($page.url.pathname) ? 'text-orange-600' : ''}"
+            class="text-gray-700 hover:text-primary font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded {$page.url.pathname && item.isActive?.($page.url.pathname) ? 'text-primary' : ''}"
           >
             {item.label}
           </a>
@@ -67,7 +67,7 @@
         
         <a 
           href={ctaButton.href}
-          class="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+          class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-hover transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
         >
           {ctaButton.label}
         </a>
@@ -75,7 +75,7 @@
 
       <!-- Mobile menu button -->
       <button 
-        class="md:hidden p-2 text-gray-700 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded"
+        class="md:hidden p-2 text-gray-700 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded"
         aria-label="Toggle mobile menu"
         aria-expanded={isMobileMenuOpen}
         on:click={toggleMobileMenu}
@@ -101,7 +101,7 @@
           {#each navItems as item}
             <a 
               href={item.href}
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 {$page.url.pathname && item.isActive?.($page.url.pathname) ? 'text-orange-600 bg-orange-50' : ''}"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 {$page.url.pathname && item.isActive?.($page.url.pathname) ? 'text-primary bg-primary-50' : ''}"
               on:click={closeMobileMenu}
             >
               {item.label}
@@ -110,7 +110,7 @@
           
           <a 
             href={ctaButton.href}
-            class="block px-3 py-2 rounded-md text-base font-medium bg-orange-600 text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+            class="block px-3 py-2 rounded-md text-base font-medium bg-primary-600 text-white hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             on:click={closeMobileMenu}
           >
             {ctaButton.label}

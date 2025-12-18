@@ -9,7 +9,7 @@
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
       <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6">
-        <span class="text-orange-500">Modular</span> Construction
+        <span class="text-primary">Modular</span> Construction
       </h1>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">
         Explore our innovative modular construction projects with precision engineering and modern design solutions.
@@ -23,7 +23,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each modulars as modular (modular.id)}
-        <div class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-orange-500">
+        <div class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary-500">
           <a href="/modular/{modular.id}">
             <div class="aspect-video bg-gray-100 overflow-hidden">
               {#if modular.images?.[0]}
@@ -40,7 +40,7 @@
               <p class="text-gray-600 mb-4">
                 {modular.images?.length || 0} images
               </p>
-              <div class="flex items-center text-orange-600 font-semibold hover:text-orange-700">
+              <div class="flex items-center text-primary font-semibold hover:text-primary-700">
                 View Gallery
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

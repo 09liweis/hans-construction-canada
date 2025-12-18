@@ -13,7 +13,7 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <nav class="mb-4">
-          <a href="/modular" class="text-orange-400 hover:text-orange-300 transition-colors">
+          <a href="/modular" class="text-primary hover:text-primary-300 transition-colors">
             ← Back to Modular Projects
           </a>
         </nav>
@@ -51,7 +51,7 @@
       <p class="text-xl text-gray-600 mb-8">
         The modular project you're looking for doesn't exist.
       </p>
-      <a href="/modular" class="px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors">
+      <a href="/modular" class="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-colors">
         View All Modular Projects
       </a>
     </div>
