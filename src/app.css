@@ -1,7 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --color-primary: red;
+  --color-primary-hover: red;
+}
 /* Custom background grid pattern */
 @layer utilities {
   .bg-grid-white\/\[0\.02\] {
