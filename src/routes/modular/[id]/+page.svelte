@@ -2,6 +2,7 @@
   import { modulars } from '$lib/modulars';
   import { page } from '$app/stores';
   import ImageModal from '../../../components/ImageModal.svelte';
+  import ImageItem from '../../../components/ImageItem.svelte';
   
   $: modular = modulars.find(m => m.id === $page.params.id);
   
@@ -41,21 +42,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {#each modular.images as image, index (image)}
-          <div class="group relative overflow-hidden rounded bg-gray-100">
-            <button 
-              type="button"
-              onclick={() => openImageModal(index)}
-              onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') openImageModal(index); }}
-              class="w-full cursor-pointer h-64 relative overflow-hidden rounded"
-              aria-label={`View image ${index + 1} of ${modular.images.length}`}
-            >
-              <img 
-                src={image} 
-                alt="{modular.title} - Image {index + 1}"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 pointer-events-none"
-              />
-            </button>
-          </div>
+          <ImageItem 
+            image={image}
+            index={index}
+            total={modular.images.length}
+            title={modular.title}
+            onImageClick={openImageModal}
+          />
         {/each}
       </div>
     </div>
