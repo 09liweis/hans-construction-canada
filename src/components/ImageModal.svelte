@@ -79,7 +79,7 @@
     <!-- Close button -->
     <button 
       onclick={closeModal}
-      class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+      class="absolute cursor-pointer top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
       aria-label="Close modal"
     >
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
