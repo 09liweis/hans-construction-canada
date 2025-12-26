@@ -23,7 +23,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each modulars as modular (modular.id)}
-        <div class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary-500">
+        <div class="group bg-white border border-gray-200 rounded overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary-500">
           <a href="/modular/{modular.id}">
             <div class="aspect-video bg-gray-100 overflow-hidden">
               {#if modular.images?.[0]}
