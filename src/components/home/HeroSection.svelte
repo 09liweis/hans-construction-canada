@@ -62,7 +62,7 @@
           <div class="text-gray-400 text-sm mt-1">Across Canada</div>
         </div>
         <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center">
-          <div class="text-4xl font-bold text-[#ef4444] mb-2">25+</div>
+          <div class="text-4xl font-bold text-[#ef4444] mb-2">30+</div>
           <div class="text-white font-medium">Years Experience</div>
           <div class="text-gray-400 text-sm mt-1">Industry Leader</div>
         </div>
