@@ -8,8 +8,8 @@ export const projects = [
     id: 'honey-locust-vaughan',
     title: 'Honey Locust, Vaughan',
     images: [
-      '/projects/honey-locust-vaughan/image-001.heic',
-      '/projects/honey-locust-vaughan/image-002.heic'
+      '/projects/honey-locust-vaughan/image-001.jpg',
+      '/projects/honey-locust-vaughan/image-002.jpg'
     ]
   },
   {
