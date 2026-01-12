@@ -24,7 +24,7 @@ export const projects = [
   {
     id: 'assinck-mining-equipment-acton',
     title: 'Assinck Mining Equipment, Acton',
-    images: Array.from({ length: 5 }, (_, i) => `/projects/assinck-mining-equipment-acton/image-${String(i + 1).padStart(3, '0')}.heic`)
+    images: Array.from({ length: 5 }, (_, i) => `/projects/assinck-mining-equipment-acton/image-${String(i + 1).padStart(3, '0')}.jpg`)
   },
   {
     id: 'chinese-memorial-garden-richmond-hill',
