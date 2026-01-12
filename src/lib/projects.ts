@@ -17,8 +17,7 @@ export const projects = [
     title: 'Kensington Dr, Richmond Hill',
     images: Array.from({ length: 52 }, (_, i) => {
       const num = String(i + 1).padStart(3, '0');
-      const ext = i < 12 || (i >= 14 && i <= 27) || i >= 36 ? 'jpg' : 'heic';
-      return `/projects/kensington-dr-richmond-hill/image-${num}.${ext}`;
+      return `/projects/kensington-dr-richmond-hill/image-${num}.jpg`;
     })
   },
   {
