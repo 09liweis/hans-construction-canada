@@ -1,24 +1,5 @@
 <script>
   import { colors } from '$lib/colors';
-  let formData = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  };
-
-  let submitted = false;
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    // Form submission logic here
-    submitted = true;
-    setTimeout(() => {
-      submitted = false;
-      formData = { name: '', email: '', phone: '', subject: '', message: '' };
-    }, 3000);
-  }
 </script>
 
 <svelte:head>
@@ -43,7 +24,7 @@
 <section class="py-16 lg:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-3 gap-12 mb-16">
-      <!-- Contact Info Cards -->
+      <!-- Address Card -->
       <div class="flex flex-col">
         <div class="flex items-center mb-4">
           <div class="w-12 h-12 bg-[#ef4444]/10 rounded-lg flex items-center justify-center mr-4">
@@ -55,11 +36,13 @@
           <h3 class="text-lg font-semibold text-slate-900">Address</h3>
         </div>
         <p class="text-gray-600 ml-16">
-          Toronto, Ontario<br />
+          6 Sangster Rd<br />
+          Uxbridge, ON L9P 0G5<br />
           Canada
         </p>
       </div>
 
+      <!-- Phone Card -->
       <div class="flex flex-col">
         <div class="flex items-center mb-4">
           <div class="w-12 h-12 bg-[#ef4444]/10 rounded-lg flex items-center justify-center mr-4">
@@ -70,12 +53,13 @@
           <h3 class="text-lg font-semibold text-slate-900">Phone</h3>
         </div>
         <p class="text-gray-600 ml-16">
-          <a href="tel:+1-416-555-0123" class="hover:text-[#ef4444] transition-colors">
-            +1 (416) 555-0123
+          <a href="tel:+1-905-640-1000" class="hover:text-[#ef4444] transition-colors font-semibold">
+            (905) 640-1000
           </a>
         </p>
       </div>
 
+      <!-- Email Card -->
       <div class="flex flex-col">
         <div class="flex items-center mb-4">
           <div class="w-12 h-12 bg-[#ef4444]/10 rounded-lg flex items-center justify-center mr-4">
@@ -93,108 +77,55 @@
       </div>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12">
-      <!-- Map Section -->
-      <div class="h-96 lg:h-full rounded-lg overflow-hidden shadow-lg">
-        <iframe
-          title="Hansteel Construction Location Map"
-          class="w-full h-full border-0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.4506565834143!2d-79.3957!3d43.6618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b349cf10caf4f%3A0x8f6e9c0b9c0b9c0b!2sDowntown%20Toronto%2C%20ON!5e0!3m2!1sen!2sca!4v1234567890"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        />
+    <!-- Hours Section -->
+    <div class="bg-gray-50 rounded-lg p-8 mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Business Hours</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-3">
+          <div class="flex justify-between">
+            <span class="text-gray-700 font-medium">Monday</span>
+            <span class="text-gray-600">8:30 a.m. – 5:30 p.m.</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-700 font-medium">Tuesday</span>
+            <span class="text-gray-600">8:30 a.m. – 5:30 p.m.</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-700 font-medium">Wednesday</span>
+            <span class="text-gray-600">8:30 a.m. – 5:30 p.m.</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-700 font-medium">Thursday</span>
+            <span class="text-gray-600">8:30 a.m. – 5:30 p.m.</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex justify-between">
+            <span class="text-gray-700 font-medium">Friday</span>
+            <span class="text-gray-600">8:30 a.m. – 5:30 p.m.</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-700 font-medium">Saturday</span>
+            <span class="text-gray-600">Closed</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-700 font-medium">Sunday</span>
+            <span class="text-gray-600">Closed</span>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <!-- Contact Form -->
-      <div class="bg-gray-50 rounded-lg p-8">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Send us a Message</h2>
-        
-        {#if submitted}
-          <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-            <p class="text-green-800 font-semibold">Thank you! We'll be in touch soon.</p>
-          </div>
-        {/if}
-
-        <form on:submit={handleSubmit} class="space-y-4">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label for="name" class="block text-sm font-medium text-slate-900 mb-2">
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                bind:value={formData.name}
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
-                placeholder="Your Name"
-              />
-            </div>
-            <div>
-              <label for="phone" class="block text-sm font-medium text-slate-900 mb-2">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                bind:value={formData.phone}
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
-                placeholder="(416) 555-0123"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label for="email" class="block text-sm font-medium text-slate-900 mb-2">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              bind:value={formData.email}
-              required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
-              placeholder="your@email.com"
-            />
-          </div>
-
-          <div>
-            <label for="subject" class="block text-sm font-medium text-slate-900 mb-2">
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              bind:value={formData.subject}
-              required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
-              placeholder="Project Inquiry"
-            />
-          </div>
-
-          <div>
-            <label for="message" class="block text-sm font-medium text-slate-900 mb-2">
-              Message
-            </label>
-            <textarea
-              id="message"
-              bind:value={formData.message}
-              required
-              rows="5"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444] resize-none"
-              placeholder="Tell us about your project..."
-            />
-          </div>
-
-          <button
-            type="submit"
-            class="w-full px-8 py-3 bg-[#ef4444] text-white font-semibold rounded-lg hover:bg-[#dc2626] transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+    <!-- Map Section -->
+    <div class="h-96 rounded-lg overflow-hidden shadow-lg">
+      <iframe
+        title="Hansteel Construction Location Map"
+        class="w-full h-full border-0"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.8826362088584!2d-79.1505!3d44.0105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4e5e5e5e5e5e5%3A0x0!2s6%20Sangster%20Rd%2C%20Uxbridge%2C%20ON%20L9P%200G5!5e0!3m2!1sen!2sca!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      />
     </div>
   </div>
 </section>
@@ -207,7 +138,7 @@
       Our team is ready to discuss your construction needs and provide expert solutions tailored to your project.
     </p>
     <a
-      href="tel:+1-416-555-0123"
+      href="tel:+1-905-640-1000"
       class="inline-block px-8 py-3 bg-white text-[#ef4444] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
     >
       Call Us Today
