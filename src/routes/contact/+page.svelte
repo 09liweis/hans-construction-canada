@@ -1,5 +1,6 @@
 <script>
   import { colors } from '$lib/colors';
+  import LocationSection from '../../components/home/LocationSection.svelte';
 </script>
 
 <svelte:head>
@@ -115,20 +116,10 @@
         </div>
       </div>
     </div>
-
-    <!-- Map Section -->
-    <div class="h-96 rounded-lg overflow-hidden shadow-lg">
-      <iframe
-        title="Hansteel Construction Location Map"
-        class="w-full h-full border-0"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.8826362088584!2d-79.1505!3d44.0105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4e5e5e5e5e5e5%3A0x0!2s6%20Sangster%20Rd%2C%20Uxbridge%2C%20ON%20L9P%200G5!5e0!3m2!1sen!2sca!4v1234567890"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      />
-    </div>
-  </div>
+</div>
 </section>
+
+<LocationSection />
 
 <!-- CTA Section -->
 <section class="bg-gradient-to-r from-[#ef4444] to-[#dc2626] py-16">
