@@ -5,11 +5,8 @@
       Get a free, no-obligation consultation and let our experts bring your vision to life with precision and quality.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/contact" class="px-8 py-4 bg-white text-[#ef4444] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg">
-        Get Free Quote
-      </a>
-      <a href="tel:+1-555-123-4567" class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#ef4444] transition-all duration-300">
-        Call Us: (555) 123-4567
+      <a href="tel:+1-905-640-1000" class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#ef4444] transition-all duration-300">
+        Call Us: (905) 640-1000
       </a>
     </div>
   </div>
