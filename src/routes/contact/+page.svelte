@@ -1,0 +1,222 @@
+<script>
+  import { colors } from '$lib/colors';
+  let formData = {
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  };
+
+  let submitted = false;
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    // Form submission logic here
+    submitted = true;
+    setTimeout(() => {
+      submitted = false;
+      formData = { name: '', email: '', phone: '', subject: '', message: '' };
+    }, 3000);
+  }
+</script>
+
+<svelte:head>
+  <title>Contact Us - Hansteel Construction Inc</title>
+  <meta name="description" content="Get in touch with Hansteel Construction Inc. Contact us for quotes, consultations, and project inquiries." />
+</svelte:head>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
+  <div class="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-5xl lg:text-6xl font-bold text-white mb-4">
+      Get in <span class="text-[#ef4444]">Touch</span>
+    </h1>
+    <p class="text-xl text-gray-300 max-w-2xl">
+      Have a project in mind? We'd love to hear from you. Contact our team for a free consultation.
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-12 mb-16">
+      <!-- Contact Info Cards -->
+      <div class="flex flex-col">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-[#ef4444]/10 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900">Address</h3>
+        </div>
+        <p class="text-gray-600 ml-16">
+          Toronto, Ontario<br />
+          Canada
+        </p>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-[#ef4444]/10 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900">Phone</h3>
+        </div>
+        <p class="text-gray-600 ml-16">
+          <a href="tel:+1-416-555-0123" class="hover:text-[#ef4444] transition-colors">
+            +1 (416) 555-0123
+          </a>
+        </p>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-[#ef4444]/10 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900">Email</h3>
+        </div>
+        <p class="text-gray-600 ml-16">
+          <a href="mailto:info@hansteelconstruction.com" class="hover:text-[#ef4444] transition-colors">
+            info@hansteelconstruction.com
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+      <!-- Map Section -->
+      <div class="h-96 lg:h-full rounded-lg overflow-hidden shadow-lg">
+        <iframe
+          title="Hansteel Construction Location Map"
+          class="w-full h-full border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.4506565834143!2d-79.3957!3d43.6618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b349cf10caf4f%3A0x8f6e9c0b9c0b9c0b!2sDowntown%20Toronto%2C%20ON!5e0!3m2!1sen!2sca!4v1234567890"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        />
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Send us a Message</h2>
+        
+        {#if submitted}
+          <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <p class="text-green-800 font-semibold">Thank you! We'll be in touch soon.</p>
+          </div>
+        {/if}
+
+        <form on:submit={handleSubmit} class="space-y-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-900 mb-2">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                bind:value={formData.name}
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
+                placeholder="Your Name"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-slate-900 mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                bind:value={formData.phone}
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
+                placeholder="(416) 555-0123"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-900 mb-2">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              bind:value={formData.email}
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-medium text-slate-900 mb-2">
+              Subject
+            </label>
+            <input
+              type="text"
+              id="subject"
+              bind:value={formData.subject}
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444]"
+              placeholder="Project Inquiry"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-slate-900 mb-2">
+              Message
+            </label>
+            <textarea
+              id="message"
+              bind:value={formData.message}
+              required
+              rows="5"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4444] resize-none"
+              placeholder="Tell us about your project..."
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full px-8 py-3 bg-[#ef4444] text-white font-semibold rounded-lg hover:bg-[#dc2626] transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-gradient-to-r from-[#ef4444] to-[#dc2626] py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+    <p class="text-lg text-red-100 mb-8">
+      Our team is ready to discuss your construction needs and provide expert solutions tailored to your project.
+    </p>
+    <a
+      href="tel:+1-416-555-0123"
+      class="inline-block px-8 py-3 bg-white text-[#ef4444] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+    >
+      Call Us Today
+    </a>
+  </div>
+</section>
+
+<style>
+  :global(body) {
+    scroll-behavior: smooth;
+  }
+</style>
