@@ -1,13 +1,12 @@
 <script lang="ts">
   import '../app.css';
-  import favicon from '$lib/assets/favicon.svg';
   import Navigation from '../components/Navigation.svelte';
 
   let { children } = $props();
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
+  <link rel="icon" href="/favicon.png" />
   <title>Hans Construction Canada</title>
 </svelte:head>
 
