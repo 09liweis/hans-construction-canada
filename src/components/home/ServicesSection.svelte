@@ -1,9 +1,12 @@
+<script>
+  import { COMPANY_NAME } from '$lib';
+</script>
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-gray-900 mb-4">Complete Construction Solutions</h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Hansteel Construction Inc, a division of Hans International Group, delivers comprehensive construction services across all project phases.
+        {COMPANY_NAME}, a division of Hans International Group, delivers comprehensive construction services across all project phases.
       </p>
     </div>
     

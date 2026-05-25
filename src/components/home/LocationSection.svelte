@@ -1,3 +1,6 @@
+<script>
+  import { COMPANY_NAME } from '$lib';
+</script>
 <section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
@@ -16,7 +19,7 @@
         style="border:0;"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        title="Hansteel Construction Inc Location"
+        title={COMPANY_NAME + ' Location'}
         class="w-full h-full"
       ></iframe>
     </div>

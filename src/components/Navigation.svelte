@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { COMPANY_NAME } from '$lib';
 
   interface NavItem {
     label: string;
@@ -51,7 +52,7 @@
         href="/" 
         class="flex items-center focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded"
       >
-        <span class="text-2xl font-bold text-primary">Hansteel Construction</span>
+        <span class="text-2xl font-bold text-primary">{COMPANY_NAME}</span>
       </a>
 
       <!-- Desktop Navigation -->

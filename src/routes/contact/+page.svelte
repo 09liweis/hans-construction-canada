@@ -1,11 +1,12 @@
 <script>
   import { colors } from '$lib/colors';
   import LocationSection from '../../components/home/LocationSection.svelte';
+  import { COMPANY_NAME } from '$lib';
 </script>
 
 <svelte:head>
-  <title>Contact Us - Hansteel Construction Inc</title>
-  <meta name="description" content="Get in touch with Hansteel Construction Inc. Contact us for quotes, consultations, and project inquiries." />
+  <title>Contact Us - {COMPANY_NAME}</title>
+  <meta name="description" content={`Get in touch with ${COMPANY_NAME}. Contact us for quotes, consultations, and project inquiries.`} />
 </svelte:head>
 
 <!-- Hero Section -->

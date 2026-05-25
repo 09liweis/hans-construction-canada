@@ -1,5 +1,6 @@
 <script>
   import { colors } from '$lib/colors';
+  import { COMPANY_NAME } from '$lib';
 </script>
 
 <section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center">
@@ -10,12 +11,9 @@
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
       <div class="text-center lg:text-left">
-        <div class="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
-          <span class="text-[#ef4444] text-sm font-medium">🏗️ Hans International Group Division</span>
-        </div>
         
         <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          <span class="text-[#ef4444]">Hansteel</span> Construction Inc
+          <span class="text-[#ef4444]">{COMPANY_NAME.split(' ')[0]}</span> {COMPANY_NAME.split(' ').slice(1).join(' ')}
         </h1>
         
         <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
